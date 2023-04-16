@@ -155,3 +155,12 @@ yarn rw setup auth dbAuth
 ```
 
 When prompted to "Enable WebAuthn support", pick no—this is a separate piece of functionality we won't need for the tutorial. You'll see that the process creates several files and includes some post-install instructions for the last couple of customizations you'll need to make. Let's go through them now.
+
+## Login & Signup Pages
+Yet another generator is here for you, this time one that will create pages for login, signup and forgot password pages:
+
+```
+yarn rw g dbAuth
+```
+
+Again several pages will be created and some post-install instructions will describe next steps. But for now, try going to http://localhost:8910/login:

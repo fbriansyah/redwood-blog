@@ -48,7 +48,7 @@ const LoginPage = () => {
     <>
       <MetaTags title="Login" />
 
-      <main className="rw-main">
+      <main className="rw-main mx-auto mt-12 w-96">
         <Toaster toastOptions={{ className: 'rw-toast', duration: 6000 }} />
         <div className="rw-scaffold rw-login-container">
           <div className="rw-segment">
@@ -60,26 +60,26 @@ const LoginPage = () => {
               <div className="rw-form-wrapper">
                 <Form onSubmit={onSubmit} className="rw-form-wrapper">
                   <Label
-                    name="email"
+                    name="username"
                     className="rw-label"
                     errorClassName="rw-label rw-label-error"
                   >
-                    Email
+                    Username
                   </Label>
                   <TextField
-                    name="email"
+                    name="username"
                     className="rw-input"
                     errorClassName="rw-input rw-input-error"
                     ref={emailRef}
                     validation={{
                       required: {
                         value: true,
-                        message: 'Email is required',
+                        message: 'Username is required',
                       },
                     }}
                   />
 
-                  <FieldError name="email" className="rw-field-error" />
+                  <FieldError name="username" className="rw-field-error" />
 
                   <Label
                     name="password"
@@ -104,7 +104,7 @@ const LoginPage = () => {
                   <div className="rw-forgot-link">
                     <Link
                       to={routes.forgotPassword()}
-                      className="rw-forgot-link"
+                      className="rw-forgot-link underline"
                     >
                       Forgot Password?
                     </Link>
@@ -119,7 +119,7 @@ const LoginPage = () => {
               </div>
             </div>
           </div>
-          <div className="rw-login-link">
+          <div className="rw-login-link mt-2 text-center">
             <span>Don&apos;t have an account?</span>{' '}
             <Link to={routes.signup()} className="rw-link">
               Sign up!

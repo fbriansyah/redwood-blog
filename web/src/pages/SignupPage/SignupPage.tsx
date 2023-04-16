@@ -50,7 +50,7 @@ const SignupPage = () => {
     <>
       <MetaTags title="Signup" />
 
-      <main className="rw-main">
+      <main className="rw-main mx-auto mt-12 w-96">
         <Toaster toastOptions={{ className: 'rw-toast', duration: 6000 }} />
         <div className="rw-scaffold rw-login-container">
           <div className="rw-segment">
@@ -62,25 +62,26 @@ const SignupPage = () => {
               <div className="rw-form-wrapper">
                 <Form onSubmit={onSubmit} className="rw-form-wrapper">
                   <Label
-                    name="email"
+                    name="username"
                     className="rw-label"
                     errorClassName="rw-label rw-label-error"
                   >
-                    Email
+                    Username
                   </Label>
                   <TextField
-                    name="email"
+                    name="username"
                     className="rw-input"
                     errorClassName="rw-input rw-input-error"
                     ref={emailRef}
                     validation={{
                       required: {
                         value: true,
-                        message: 'Email is required',
+                        message: 'Username is required',
                       },
                     }}
                   />
-                  <FieldError name="email" className="rw-field-error" />
+
+                  <FieldError name="username" className="rw-field-error" />
 
                   <Label
                     name="password"
@@ -101,6 +102,7 @@ const SignupPage = () => {
                       },
                     }}
                   />
+
                   <FieldError name="password" className="rw-field-error" />
 
                   <div className="rw-button-group">
@@ -112,7 +114,7 @@ const SignupPage = () => {
               </div>
             </div>
           </div>
-          <div className="rw-login-link">
+          <div className="rw-login-link mt-2 text-center">
             <span>Already have an account?</span>{' '}
             <Link to={routes.login()} className="rw-link">
               Log in!

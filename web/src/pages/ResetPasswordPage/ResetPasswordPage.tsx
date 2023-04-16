@@ -92,7 +92,7 @@ const ResetPasswordPage = ({ resetToken }: { resetToken: string }) => {
                       validation={{
                         required: {
                           value: true,
-                          message: 'New Password is required',
+                          message: 'Password is required',
                         },
                       }}
                     />

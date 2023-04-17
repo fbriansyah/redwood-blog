@@ -164,3 +164,15 @@ yarn rw g dbAuth
 ```
 
 Again several pages will be created and some post-install instructions will describe next steps. But for now, try going to http://localhost:8910/login:
+
+## Run Storybook
+
+```
+yarn rw storybook
+```
+
+## Run Test
+
+```
+yarn rw test
+```

@@ -52,12 +52,7 @@ const ContactPage = () => {
       <MetaTags title="Contact" description="Contact page" />
 
       <Toaster />
-      <Form
-        onSubmit={onSubmit}
-        config={{ mode: 'onBlur' }}
-        error={error}
-        formMethods={formMethods}
-      >
+      <Form onSubmit={onSubmit} error={error} formMethods={formMethods}>
         <FormError
           error={error}
           wrapperClassName="py-4 px-6 rounded-lg bg-red-100 text-red-700"
